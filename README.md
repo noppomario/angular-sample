@@ -1,27 +1,73 @@
 # angular-sample
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
+## 概要
 
-## Development server
+[Angular](https://angular.jp)フレームワークを使ったサンプル
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 事前準備
 
-## Code scaffolding
+- Node.js の導入
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 導入
 
-## Build
+```bash
+npm install
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 起動コマンド
 
-## Running unit tests
+```bash
+# 開発サーバ起動(ホットリロード)
+$ npm run start
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 静的解析
 
-## Running end-to-end tests
+```bash
+# 実行
+$ npm run lint
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# 強制的に修正
+$ npm run fix
+```
 
-## Further help
+## テスト
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+# 単体テスト
+$ npm run test
+
+# e2eテスト
+$ npm run e2e
+```
+
+## ビルド
+
+```bash
+# 実運用環境で利用する.js/.css/.htmlを生成する
+$ npm run build
+```
+
+## 生成ファイルのリセット
+
+```bash
+# distフォルダを削除
+$ npm run clean
+```
+
+## 実装の雛形を追加
+
+```bash
+# componentを追加する
+$ npm run ng generate component component-name
+
+※その他以下が利用可能
+  npm run ng generate directive|pipe|service|class|guard|interface|enum|module
+```
+
+## ヘルプ表示
+
+```bash
+# ngコマンドのヘルプを表示
+$ npm run ng help
+```
