@@ -53,7 +53,7 @@ $ npm run fix
 ### テスト
 
 ```bash
-# 単体テスト
+# 単体テスト(ホットリロード)
 $ npm run test
 
 # e2eテスト
