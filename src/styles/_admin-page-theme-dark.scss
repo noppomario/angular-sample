@@ -1,0 +1,64 @@
+@use '@angular/material' as mat;
+@use '@angular/material/theming' as theme;
+@include mat.core();
+
+// プライマリーカラーパレット
+$primary-palette: (
+  default: #263238,
+  lighter: #4f5b62,
+  darker: #000a12,
+  contrast: (
+    default: theme.$dark-primary-text,
+    lighter: theme.$dark-primary-text,
+    darker: theme.$dark-primary-text,
+  ),
+);
+// アクセントカラーパレット
+$accent-palette: (
+  default: #e0897b,
+  lighter: #ffbaaa,
+  darker: #ab5b4f,
+  contrast: (
+    default: theme.$dark-primary-text,
+    lighter: theme.$dark-primary-text,
+    darker: theme.$light-primary-text,
+  ),
+);
+
+// プライマリーカラーのマップを作成
+$angular-sample-primary: mat.define-palette(
+  $primary-palette,
+  default,
+  lighter,
+  darker
+);
+
+// アクセントカラーパレットのマップを作成
+$angular-sample-accent: mat.define-palette(
+  $accent-palette,
+  default,
+  lighter,
+  darker
+);
+
+// 警告カラーパレット
+$angular-sample-warn: mat.define-palette(mat.$red-palette);
+
+// $dark-primary: mat-palette($mat-blue-grey);
+// $dark-accent: mat-palette($mat-amber, A200, A100, A400);
+// $dark-warn: mat-palette($mat-deep-orange);
+// $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+// lightモード 又は darkモードのテーマに設定する
+// ここではlightモードを使用する
+$angular-sample-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $angular-sample-primary,
+      accent: $angular-sample-accent,
+      warn: $angular-sample-warn,
+    ),
+  )
+);
+
+@include mat.all-component-themes($angular-sample-theme);
